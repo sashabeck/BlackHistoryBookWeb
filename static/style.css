@@ -1,0 +1,22 @@
+/*
+.index head {
+    background-color: #ffffff;
+}*/
+
+a:link {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(133, 87, 60);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    background-color: red;
+}
+
+.index select {
+    margin: 25px 50px 75px 100px;
+}

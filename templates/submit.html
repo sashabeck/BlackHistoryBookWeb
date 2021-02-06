@@ -12,9 +12,14 @@
 </head>
 
 <body>
+
+    {% extends "base.html" %} {% block content %}
     <h1>Submitted</h1>
     <p>We got your submission</p>
-    <p>{{genre}} {{length}}</p>
+    <p>{{genre}} {{length}} </p>
+    <p>This is the book generated back</p>
+    <p>{{book}}</p>
+    {% endblock %}
 
 </body>
 

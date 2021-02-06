@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA36nXS3bHKygJPKCYeDhrOGrUXU3RRofE",
+            authDomain: "blackhistory0206.firebaseapp.com",
+            projectId: "blackhistory0206",
+            storageBucket: "blackhistory0206.appspot.com",
+            messagingSenderId: "246456055055",
+            appId: "1:246456055055:web:29a0e32161b5a45761fa7a",
+            measurementId: "G-4ZNXWF7FWC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //   const auth = firebase.auth()
+
+        //   export default auth
+        firebase.analytics();
+    </script>
+
+    <h3> Please log in</h3>
+    <div id="login_div" class=m ain_div>
+        <input type="email" placeholder="Email..." id="email_field">
+        <input type="password" placeholder="password..." id="password_field">
+        <button onclick="login()">login</button>
+    </div>
+
+    <div id="user_div" class="loggedin_div">
+        <p>you are logged in</p>
+        <button>Logout</button>
+    </div>
+    <script src="index.js"></script>
+    <!-- 
+<button onclick = "login()">login</button>
+<script src = "index.js"></script> -->
+
+</body>
+
+</html>
