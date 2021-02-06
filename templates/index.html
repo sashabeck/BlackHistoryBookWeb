@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Home Page</title>
+    <meta name="description" content="Home Page">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Books</h1>
+    <p>FemmeHacks 2021 :)!</p>
+    <form class="bookFinder" method="POST" action="/submitted">
+        <select class="bookForm" id="genreDropdownSelector" type="text" name="genreDropdown" placeholder="Genre">
+            <option disabled selected>Genre</option>
+            <option id="Action/Adventure" value="Action and Adventure">Action/Adventure</option>
+            <option id="Classics" value="Classics">Classics</option>
+        </select>
+        <select class="bookForm" id="lengthDropdownSelector" type="text" name="lengthDropdown" placeholder="Length">
+            <option disabled selected>Length</option>
+            <option id="Short" value="Short">Short (< 200 pages)</option>
+            <option id="Medium" value="Medium">Medium (200-400 pages)</option>
+            <option id="Long" value="Long">Long (> 400 pages)</option>
+        </select>
+
+        <p><input type="submit" value="submit"></p>
+    </form>
+
+</body>
+
+</html>
