@@ -1,5 +1,13 @@
 from flask import Flask, redirect, url_for, render_template, request
+import requests
+import json
 app = Flask(__name__)
+response = requests.get("https://www.googleapis.com/books/v1/volumes?q=search+terms")
+print(response.json())
+
+# book_data is a list of data
+book_data = json.loads(response.content)
+
 
 @app.route('/', methods=['POST','GET'])
 def home():
@@ -16,27 +24,19 @@ def submit():
         length = request.form["lengthDropdown"]
         return redirect(url_for("success", genre=genre, length=length))
 
+@app.route('/recommendations')
+def recommendations():
+    return render_template("recommendations.html")
 
+@app.route('/my_list')
+def my_list():
+    return render_template("my_list.html")
 
-if __name__ == "__main__":
-    app.run()
+@app.route('/movies')
+def movies():
+    return render_template("movies.html")
 
-# Everything below is reference -----------------------------
+@app.route('/author_picks')
+def author_picks():
+    return render_template("author_picks.html")
 
-'''
-# enter anything into the url after /, it will repeat itself
-@app.route("/<name>")
-def user(name):
-    return f"Hello {name}!"
-
-# calls the user function, passes in an argument for the parameter, <name>
-@app.route('/admin')
-def admin():
-    return redirect(url_for("user", name="Admin!"))
-
-
-# redirects back to the home page
-@app.route("/admin")
-def admin():
-    return redirect(url_for("home"))
-'''
