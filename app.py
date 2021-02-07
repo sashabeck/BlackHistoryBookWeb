@@ -44,15 +44,15 @@ def submit():
             boook = chosenBooks.pop()
             return redirect(url_for("success", genre=genre, length=length, book=boook))
         except:
-            return "submit not working"
+            return redirect(url_for("notfound"))
 
 @app.route('/recommendations')
 def recommendations():
     return render_template("recommendations.html")
 
-@app.route('/lengtherror')
-def lengtherror():
-    return render_template("lengtherror.html")
+@app.route('/notfound')
+def notfound():
+    return render_template("notfound.html")
 
 @app.route('/seterror/<msg>')
 def seterror(msg):
@@ -70,9 +70,9 @@ def movies():
 def author_picks():
     return render_template("author_picks.html")
 
-@app.route('/login')
-def login():
-    return render_template("login.html")
+@app.route('/index1')
+def index1():
+    return render_template("index1.html")
 
 @app.route('/signup')
 def signup():

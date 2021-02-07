@@ -1,23 +1,41 @@
 <!doctype html>
-
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="../static/about.css">
+
+
 
 <head>
     <meta charset="utf-8">
 
-    <title> About Page</title>
+    <h1>
+        <title> About Page</title>
+    </h1>
     <meta name="description" content="About Page">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+<div class="text">
 
-<body>
+    <body>
 
-    {% extends "base.html" %} {% block content %}
-    <h1>About page</h1>
-    <p>Learn</p>
-    {% endblock %}
+        {% extends "base.html" %} {% block content %}
+        <h1 style="padding: 30px 0px 0px 0px; text-align: center; font-family:Calibri, 'Trebuchet MS', sans-serif">About BHM</h1>
+        <h5 style="text-align: center; font-family:Calibri, 'Trebuchet MS', sans-serif">And why it is so important</h5>
+        <p style="margin: 2px 50px 2px 50px; text-align: center; font-family:Calibri, 'Trebuchet MS', sans-serif">Black History Month is an annual celebration of achievements by African Americans and a time for recognizing their central role in U.S. history. Also known as African American History Month, the event grew out of “Negro History Week,” the brainchild
+            of noted historian Carter G. Woodson and other prominent African Americans. Since 1976, every U.S. president has officially designated the month of February as Black History Month. Other countries around the world, including Canada and the
+            United Kingdom, also devote a month to celebrating Black history. The story of Black History Month begins in 1915, half a century after the Thirteenth Amendment abolished slavery in the United States. That September, the Harvard-trained historian
+            Carter G. Woodson and the prominent minister Jesse E. Moorland founded the Association for the Study of Negro Life and History (ASNLH), an organization dedicated to researching and promoting achievements by Black Americans and other peoples
+            of African descent. Known today as the Association for the Study of African American Life and History (ASALH), the group sponsored a national Negro History week in 1926, choosing the second week of February to coincide with the birthdays of
+            Abraham Lincoln and Frederick Douglass. The event inspired schools and communities nationwide to organize local celebrations, establish history clubs and host performances and lectures. In the decades that followed, mayors of cities across
+            the country began issuing yearly proclamations recognizing Negro History Week. By the late 1960s, thanks in part to the civil rights movement and a growing awareness of Black identity, Negro History Week had evolved into Black History Month
+            on many college campuses. President Gerald Ford officially recognized Black History Month in 1976, calling upon the public to “seize the opportunity to honor the too-often neglected accomplishments of Black Americans in every area of endeavor
+            throughout our history. Since 1976, every American president has designated February as Black History Month and endorsed a specific theme. The Black History Month 2021 theme, “Black Family: Representation, Identity and Diversity” explores
+            the African diaspora, and the spread of Black families across the United States.
 
-</body>
+        </p>
+        <img src="https://api.time.com/wp-content/uploads/2020/01/Rosa-Parks-Martin-Luther-King-Jr-Harriet-Tubman-Barack-Obama-black-history-month.jpg?w=800&quality=85" alt="Black Figures Photo" width=500px height=400px style="margin:50px 300px 5px;">        {% endblock %}
+
+    </body>
+</div>
 
 </html>

@@ -8,26 +8,40 @@
     <title>Home Page</title>
     <meta name="description" content="Home Page">
     <link rel="stylesheet" type="text/css" href="../static/index.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
 
 </head>
 
 
 <body>
+
+    <script src="fireBase.js"></script>
+    <script src="login.js"></script>
     {% extends "base.html" %}
     <h1>Books</h1>
     {% block content %}
     <div>
-        <p>FemmeHacks 2021 :)!</p>
+        <p></p>
         <div>
-            <h1>A website dedicated to connecting readers to Black authors</h>
+            <h1 style="text-align: center;">Connecting readers to Black authors</h1>
         </div>
         <div class="container">
             <form class="bookFinder" method="POST" action="/submitted">
                 <select class="bookForm" id="genreDropdownSelector" type="text" name="genreDropdown" placeholder="Genre" style="color:rgb(102, 59, 34);">
             <option disabled selected>Genre</option>
-            <option id="Action/Adventure" value="Action and Adventure">Action/Adventure</option>
             <option id="Classic" value="Classic">Classic</option>
+            <option id="Contemporary" value="Contemporary">Contemporary</option>
+            <option id="Fantasy" value="Fantasy">Fantasy</option>
+            <option id="Historical Fiction" value="Historical Fiction">Historical Fiction</option>
+            <option id="Nonfiction" value="Nonfiction">Nonfiction</option>
+            <option id="Romance" value="Romance">Romance</option>
+            <option id="Young Adult" value="Young Adult">Young Adult</option>
+            
         </select>
                 <select class="bookForm" id="lengthDropdownSelector" type="text" name="lengthDropdown" placeholder="Length" style="color:rgb(102, 59, 34); ">
             <option disabled selected>Length</option>
@@ -39,6 +53,7 @@
                 <p><input type="submit" value="Find Books!"></p>
             </form>
         </div>
+    </div>
     </div>
     {% endblock %}
 
