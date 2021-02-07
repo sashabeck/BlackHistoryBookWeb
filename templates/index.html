@@ -7,33 +7,10 @@
 
     <title>Home Page</title>
     <meta name="description" content="Home Page">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
 
 </head>
-
-<!--
-<header>
-    <div class="topContainer">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Generator</a></li>
-
-
-                <li class = "Home"><a class = "navBarElement" href = "Online.html">Gamers Online</a></li>
-                <li class = "About"><a class = "navBarElement" href = "Forums.html">Game Forums</a></li>
-                <li class = "Generator"><a class = "navBarElement" href = "Local.html">Local Players</a></li>
-                <li class = "Generator"><a class = "navBarElement" href = "missionStatement.html">Our Mission</a></li>
-            </ul>
-    
-        </na    v>
-    
-    </div>    
-    
-</header>    
--->
 
 
 <body>
@@ -43,32 +20,24 @@
     <div>
         <p>FemmeHacks 2021 :)!</p>
         <div>
-            <p>Recommendations</p>
-            <p>Testing</p>
+            <h1>A website dedicated to connecting readers to Black authors</h>
         </div>
-        <form class="bookFinder" method="POST" action="/submitted">
-            <select class="bookForm" id="genreDropdownSelector" type="text" name="genreDropdown" placeholder="Genre">
+        <div class="container">
+            <form class="bookFinder" method="POST" action="/submitted">
+                <select class="bookForm" id="genreDropdownSelector" type="text" name="genreDropdown" placeholder="Genre" style="color:rgb(102, 59, 34);">
             <option disabled selected>Genre</option>
             <option id="Action/Adventure" value="Action and Adventure">Action/Adventure</option>
             <option id="Classic" value="Classic">Classic</option>
         </select>
-            <select class="bookForm" id="lengthDropdownSelector" type="text" name="lengthDropdown" placeholder="Length" ;>
+                <select class="bookForm" id="lengthDropdownSelector" type="text" name="lengthDropdown" placeholder="Length" style="color:rgb(102, 59, 34); ">
             <option disabled selected>Length</option>
             <option id="Short" value="Short">Short (< 200 pages)</option>
             <option id="Medium" value="Medium">Medium (200-400 pages)</option>
             <option id="Long" value="Long">Long (> 400 pages)</option>
         </select>
 
-            <p><input type="submit" value="Find Books!"></p>
-        </form>
-
-        <!--SignIn & SignUp-->
-        <ul>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/signup">SignUp</a></li>
-        </ul>
-        <div>
-            <script src="index.js"></script>
+                <p><input type="submit" value="Find Books!"></p>
+            </form>
         </div>
     </div>
     {% endblock %}

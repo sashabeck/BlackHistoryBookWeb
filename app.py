@@ -5,11 +5,7 @@ import json
 import csv
 
 app = Flask(__name__)
-'''
-response = requests.get(
-    "https://www.googleapis.com/books/v1/volumes?q=search+terms")
-print(response.json())
-'''
+
 @app.route('/', methods=['POST','GET'])
 def home():
     return render_template("index.html")
